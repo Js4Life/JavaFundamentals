@@ -150,6 +150,153 @@ public class Main {
         System.out.println(fact);
 
 
+        // do while
+
+        int iVal =5;
+
+
+        do {
+            System.out.print(iVal);
+            System.out.print("* 2 =");
+
+            iVal *=2;
+
+            System.out.println(iVal);
+
+        }while(iVal < 100);
+
+        // For Loop using while loop
+
+        int iVal1 = 1;
+
+        while (iVal1 < 100) {
+            System.out.println(iVal1);
+            iVal1 *=2;
+        }
+
+        // For loop initialize condition update
+
+        for(int iVal2 =1;iVal2<100;iVal2*=2) {
+            System.out.println("using for-loop :" +iVal2);
+        }
+
+        // Arrays
+
+      //  float[] theVals = new Float[3];
+
+        float [] theVals = {10.0f,20.0f,15.0f};
+
+//        theVals[0]=10.0f;
+//        theVals[1]=20.0f;
+//        theVals[2]=15.0f;
+
+        float sum = 0.0f;
+
+        for (int i=0;i<theVals.length;i++) {
+            sum += theVals[i];
+            System.out.println(sum);
+        }
+
+        // For Each Loop
+
+        float[] arr = {1.0f,2.0f,7.0f};
+
+        float s1 = 0f;
+
+        for (float currentVal:arr) {
+            s1 += currentVal;
+            System.out.println("sum : " +s1);
+        }
+
+        // Switch Statement
+
+        int rag = 10;
+
+        switch (rag % 2 ) {
+
+            case 0:
+                System.out.println(rag);
+                System.out.println("is even");
+                break;
+            case 1:
+                System.out.println(rag);
+                System.out.println("is odd");
+                break;
+
+                default:
+                    System.out.println("Oops its broke!");
+                    break;
+
+        }
+
+        //  Demo CalCEngine using Arrays,LOOP and Switch
+
+        double[] leftVals = {100.0d,25.0d,255.0d,11.0d};
+        double[] rightVals = {50.0d,92.0d,17.0d,3.0d};
+
+        char[] opCodes= {'d','a','s','m'};
+
+        double[] output = new double[opCodes.length];
+
+
+        for (int i=0;i<opCodes.length;i++) {
+
+//            if (opCodes[i] == 'a')
+//                output[i] = leftVals[i] + rightVals[i];
+//
+//           else if(opCodes[i]=='s')
+//                output[i] = leftVals[i] - rightVals[i];
+//
+//           else if(opCodes[i]=='m')
+//                output[i] = leftVals[i]*rightVals[i];
+//
+//          else   if(opCodes[i]=='d')
+//                output[i] = rightVals[i] != 0.0d ? leftVals[i]/rightVals[i] : 0.0d;
+//
+//            else {
+//                System.out.println("Error - Invalid Opcode");
+//                output[i] = 0.0d;
+//            }
+
+            // Using Switch Case
+
+            switch (opCodes[i]) {
+
+                case 'a':
+                    output[i] = leftVals[i] + rightVals[i];
+                    break;
+                case 'b':
+                    output[i] = leftVals[i] - rightVals[i];
+                    break;
+
+                case 'd':
+                    output[i] = rightVals[i] !=0 ? leftVals[i]/rightVals[i] : 0.0d;
+                    break;
+
+                case 'm':
+                    output[i] = leftVals[i] * rightVals[i];
+                    break;
+
+                 default:
+                     System.out.println("Error-INVALID OPCODE");
+                     output[i] = 0.0d;
+
+
+            }
+
+        }
+
+
+
+        for(double theResults:output){
+            System.out.println("results = ");
+            System.out.println(theResults);
+        }
+
+      //  System.out.println(result);
+
+
+
 
     }
 }
